@@ -20,7 +20,10 @@ public class MainFrame extends JFrame {
         int upLeftCornerY = mainScreen.y + mainScreen.height / 2 - MAIN_HEIGHT / 2;
         setLocation(upLeftCornerX, upLeftCornerY);
 
-        setContentPane(RealTime.getPanel());//Login.getInstance().getLoginPane());
+        setLayout(null);
+        setContentPane(StudentMenus.getInstance());
+        repaint();
+        //setJMenuBar((new StudentMenus()).mb);//(new MainPage()).panel1);//RealTime.getPanel());//Login.getInstance().getLoginPane());
 
         revalidate();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
